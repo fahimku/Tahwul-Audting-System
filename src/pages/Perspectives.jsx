@@ -118,7 +118,10 @@ function Perspectives() {
         <div className="flex items-start justify-between">
           <div className="flex-1">
             {/* Tag */}
-            <span className="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full mb-3">
+            <span
+              className="inline-block px-4 py-2 bg-white text-sm font-medium rounded-full mb-3 border"
+              style={{ borderColor: '#E0E8ED', color: '#E0E8ED' }}
+            >
               Strategy & Planning
             </span>
 
@@ -226,7 +229,7 @@ function Perspectives() {
         </div>
       </div>
 
-      {/* Tabs - Separate White Box */}
+      {/* Tabs*/}
       <div className="mb-4">
         <div
           className="inline-flex p-1"
@@ -267,91 +270,74 @@ function Perspectives() {
         </div>
       </div>
 
-      {/* Tab Content - Separate White Box */}
-      <div className="bg-white shadow-sm p-6" style={{ borderRadius: '8px' }}>
+      {/* Tab Content */}
+      <div className={`bg-white shadow-sm border border-gray-200 ${activeTab === 'overview' ? 'p-0 overflow-hidden' : 'p-6'}`} style={{ borderRadius: '8px' }}>
         {activeTab === 'overview' && (
-          <div className="space-y-4">
-            {/* Two-column layout for Overview content */}
-            <div className="flex gap-0">
-              {/* Left Column - Labels */}
-              <div className="w-1/4 flex-shrink-0 space-y-4 pr-4">
-                {/* Objective */}
-                <div className="bg-gray-100 rounded-lg px-4 py-3">
-                  <p className="text-sm font-medium text-gray-900">Objective</p>
-                </div>
-
-                {/* Implementation Requirements */}
-                <div className="bg-gray-100 rounded-lg px-4 py-3">
-                  <p className="text-sm font-medium text-gray-900">Implementation Requirements</p>
-                </div>
-
-                {/* Evidence Documents */}
-                <div className="bg-gray-100 rounded-lg px-4 py-3">
-                  <p className="text-sm font-medium text-gray-900">Evidence Documents</p>
-                </div>
-
-                {/* Related Regulations */}
-                <div className="bg-gray-100 rounded-lg px-4 py-3">
-                  <p className="text-sm font-medium text-gray-900">Related Regulations</p>
-                </div>
-
-                {/* Scope */}
-                <div className="bg-gray-100 rounded-lg px-4 py-3">
-                  <p className="text-sm font-medium text-gray-900">Scope</p>
-                </div>
+          <div className="flex flex-col" style={{ gap: 0 }}>
+            {/* Row 1: Objective */}
+            <div className="flex m-3">
+              <div className="w-1/4 flex-shrink-0 flex items-center justify-center px-4 py-3" style={{ backgroundColor: '#1B35570D' }}>
+                <p className="text-sm font-medium text-gray-900 text-center" style={{ fontFamily: "'Cairo', sans-serif" }}>Objective</p>
               </div>
-
-              {/* Separator Line */}
-              <div className="w-px bg-gray-300 flex-shrink-0" />
-
-              {/* Right Column - Content */}
-              <div className="flex-1 space-y-4 pl-4">
-                {/* Objective Content */}
-                <div className="bg-gray-100 rounded-lg px-4 py-3">
-                  <p className="text-sm text-gray-700">
-                    Develop A Digital Transformation Strategy Aligned With The Organization's Strategy And The Objectives Of Saudi Vision 2030.
-                  </p>
-                </div>
-
-                {/* Implementation Requirements Content */}
-                <div className="bg-gray-100 rounded-lg px-4 py-3">
-                  <p className="text-sm text-gray-700 mb-2">
+              <div className="w-px flex-shrink-0 self-stretch ml-2 mr-2" style={{  }} aria-hidden />
+              <div className="flex-1 min-w-0 px-4 py-3 flex items-center" style={{ backgroundColor: '#F5F8FA' }}>
+                <p className="text-sm text-gray-700" style={{ fontFamily: "'Cairo', sans-serif" }}>
+                  Develop A Digital Transformation Strategy Aligned With The Organization's Strategy And The Objectives Of Saudi Vision 2030.
+                </p>
+              </div>
+            </div>
+            {/* Row 2: Implementation Requirements */}
+            <div className="flex m-3">
+              <div className="w-1/4 flex-shrink-0 flex items-center justify-center px-4 py-3" style={{ backgroundColor: '#1B35570D' }}>
+                <p className="text-sm font-medium text-gray-900 text-center" style={{ fontFamily: "'Cairo', sans-serif" }}>Implementation Requirements</p>
+              </div>
+              <div className="w-px flex-shrink-0 self-stretch ml-2 mr-2" style={{ }} aria-hidden />
+              <div className="flex-1 min-w-0 px-4 py-3 flex items-center" style={{ backgroundColor: '#F5F8FA' }}>
+                <div>
+                  <p className="text-sm text-gray-700 mb-2" style={{ fontFamily: "'Cairo', sans-serif" }}>
                     Prepare A Digital Transformation Strategy For The Transition To Electronic Government Transactions, Including The Following:
                   </p>
-                  <ul className="text-sm text-gray-700 space-y-1 list-none">
-                    <li>
-                      <span className="font-medium">A.</span> The Organization's Vision, Mission, Strategic Pillars, And Strategic Objectives, And Their Alignment With The Organization's Overall Strategy.
-                    </li>
-                    <li>
-                      <span className="font-medium">B.</span> Strategic Initiatives, Programs, And Performance Indicators.
-                    </li>
-                    <li>
-                      <span className="font-medium">C.</span> A Clear Methodology For Integration And Coordination With Relevant External Entities To Achieve The Strategy's Objectives.
-                    </li>
-                    <li>
-                      <span className="font-medium">D.</span> Required Competencies, Capabilities, And Skills Necessary To Achieve The Strategy's Objectives.
-                    </li>
+                  <ul className="text-sm text-gray-700 space-y-1 list-none" style={{ fontFamily: "'Cairo', sans-serif" }}>
+                    <li><span className="font-medium">A.</span> The Organization's Vision, Mission, Strategic Pillars, And Strategic Objectives, And Their Alignment With The Organization's Overall Strategy.</li>
+                    <li><span className="font-medium">B.</span> Strategic Initiatives, Programs, And Performance Indicators.</li>
+                    <li><span className="font-medium">C.</span> A Clear Methodology For Integration And Coordination With Relevant External Entities To Achieve The Strategy's Objectives.</li>
+                    <li><span className="font-medium">D.</span> Required Competencies, Capabilities, And Skills Necessary To Achieve The Strategy's Objectives.</li>
                   </ul>
                 </div>
-
-                {/* Evidence Documents Content */}
-                <div className="bg-gray-100 rounded-lg px-4 py-3">
-                  <p className="text-sm text-gray-700">
-                    Submit The Approved Digital Transformation Strategy That Includes All The Requirements Of This Standard, Provided That It Has Been Approved Within A Period Not Exceeding 36 Months.
-                  </p>
-                </div>
-
-                {/* Related Regulations Content */}
-                <div className="bg-gray-100 rounded-lg px-4 py-3">
-                  <p className="text-sm text-gray-700">
-                    Council Of Ministers Resolution No. (40) Dated 27/2/1427H, Clause (16).
-                  </p>
-                </div>
-
-                {/* Scope Content */}
-                <div className="bg-gray-100 rounded-lg px-4 py-3">
-                  <p className="text-sm text-gray-700">All Government Entities.</p>
-                </div>
+              </div>
+            </div>
+            {/* Row 3: Evidence Documents */}
+            <div className="flex m-3">
+              <div className="w-1/4 flex-shrink-0 flex items-center justify-center px-4 py-3" style={{ backgroundColor: '#1B35570D' }}>
+                <p className="text-sm font-medium text-gray-900 text-center" style={{ fontFamily: "'Cairo', sans-serif" }}>Evidence Documents</p>
+              </div>
+              <div className="w-px flex-shrink-0 self-stretch ml-2 mr-2" style={{}} aria-hidden />
+              <div className="flex-1 min-w-0 px-4 py-3 flex items-center" style={{ backgroundColor: '#F5F8FA' }}>
+                <p className="text-sm text-gray-700" style={{ fontFamily: "'Cairo', sans-serif" }}>
+                  Submit The Approved Digital Transformation Strategy That Includes All The Requirements Of This Standard, Provided That It Has Been Approved Within A Period Not Exceeding 36 Months.
+                </p>
+              </div>
+            </div>
+            {/* Row 4: Related Regulations */}
+            <div className="flex flex-1 min-h-0 m-3">
+              <div className="w-1/4 flex-shrink-0 flex items-center justify-center px-4 py-3" style={{ backgroundColor: '#1B35570D' }}>
+                <p className="text-sm font-medium text-gray-900 text-center" style={{ fontFamily: "'Cairo', sans-serif" }}>Related Regulations</p>
+              </div>
+              <div className="w-px flex-shrink-0 self-stretch ml-2 mr-2" style={{ }} aria-hidden />
+              <div className="flex-1 min-w-0 px-4 py-3 flex items-center" style={{ backgroundColor: '#F5F8FA' }}>
+                <p className="text-sm text-gray-700" style={{ fontFamily: "'Cairo', sans-serif" }}>
+                  Council Of Ministers Resolution No. (40) Dated 27/2/1427H, Clause (16).
+                </p>
+              </div>
+            </div>
+            {/* Row 5: Scope */}
+            <div className="flex m-3">
+              <div className="w-1/4 flex-shrink-0 flex items-center justify-center px-4 py-3" style={{ backgroundColor: '#1B35570D' }}>
+                <p className="text-sm font-medium text-gray-900 text-center" style={{ fontFamily: "'Cairo', sans-serif" }}>Scope</p>
+              </div>
+              <div className="w-px flex-shrink-0 self-stretch ml-2 mr-2" style={{ }} aria-hidden />
+              <div className="flex-1 min-w-0 px-4 py-3 flex items-center" style={{ backgroundColor: '#F5F8FA' }}>
+                <p className="text-sm text-gray-700" style={{ fontFamily: "'Cairo', sans-serif" }}>All Government Entities.</p>
               </div>
             </div>
           </div>
@@ -634,7 +620,7 @@ function Perspectives() {
 
       {/* Leaders Section - Separate White Box */}
       {activeTab === 'overview' && (
-        <div className="bg-white rounded-xl shadow-sm p-6">
+        <div className="mt-4 bg-white rounded-lg shadow-sm border border-gray-200 p-6">
           <h3 className="text-base font-semibold text-gray-900 mb-4">Leaders</h3>
           <div className="flex gap-4">
             <div className="bg-gray-100 rounded-lg p-4 flex items-center gap-3">
