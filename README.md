@@ -53,7 +53,35 @@ src/
 - **Vite** - Build tool and dev server
 - **React Router DOM** - Client-side routing
 - **Tailwind CSS** - Utility-first CSS framework
+- **Recharts** - Charts and graphs (bar charts, gauges, etc.)
+- **Hugeicons** - Icon library
 - **ESLint** - Code linting
+
+## 📊 Graph package
+
+Charts and graphs are built with **[Recharts](https://recharts.org/)**. The app uses it for:
+
+- **Bar charts** – e.g. 12-Month Performance on the Dashboard
+- **Custom SVG / gauges** – e.g. Overall Compliance Score and Audit Readiness semi-circular gauges
+
+Install (already in `package.json`):
+
+```bash
+npm install recharts
+```
+
+## 🧭 Routing
+
+Routing is handled by **React Router DOM** (`BrowserRouter`, `Routes`, `Route`) in `src/App.jsx`.
+
+| Path           | Page        |
+|----------------|-------------|
+| `/`            | Dashboard   |
+| `/perspectives`| Perspectives|
+| `/tasks`       | Tasks       |
+| `/documents`   | Documents   |
+| `/reports`     | Reports     |
+| `/users`       | Users & Roles |
 
 ## 📝 Available Scripts
 
@@ -71,11 +99,3 @@ This project uses Tailwind CSS for styling. Tailwind directives are imported in 
 @tailwind components;
 @tailwind utilities;
 ```
-
-## 🧭 Routing
-
-React Router is configured in `src/App.jsx`. Current routes:
-- `/` - Home page
-- `/about` - About page
-
-Add new routes by updating the `Routes` component in `App.jsx`.
